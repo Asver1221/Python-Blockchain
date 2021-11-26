@@ -1,28 +1,29 @@
-class Animal:
-    def __init__(self, habitat, diet):
-        self.habitat = habitat
-        self.diet = diet
+def lightning_hash(data):
+    return data + '*'
 
-    def speak(self):
-        print(f"I live in the {self.habitat} and eat {self.diet}")
+class Block:
+    def __init__(self, data, hash, last_hash):
+        self.data = data
+        self.hash = hash
+        self.last_hash = last_hash
 
-animal_1 = Animal('sea', 'plankton')
-animal_1.speak()
+class Blockchain:
+    def __init__(self):
+        genesis = Block('gen_data', 'gen_hash', 'gen_last_hash')
 
+        self.chain = [genesis]
 
+    def add_block(self, data):
+        last_hash = self.chain[-1].hash
+        hash = lightning_hash(data + last_hash)
+        block = Block(data, hash, last_hash)
 
+        self.chain.append(block)
 
+foo_blockchain = Blockchain()
+foo_blockchain.add_block('one')
+foo_blockchain.add_block('two')
+foo_blockchain.add_block('three')
 
-
-class Lion(Animal):
-    def __init__(self, title, pride_size):
-        super().__init__('savanna', 'meat')
-        self.title = title
-        self.pride_size = pride_size
-
-    def roar(self):
-        print(f"I'm the {self.title} of my pride of {self.pride_size} lions")
-
-scar = Lion('outcast', 15)
-scar.roar()
-scar.speak()
+for block in foo_blockchain.chain:
+    print(block.__dict__)
