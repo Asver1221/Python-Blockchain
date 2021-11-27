@@ -1,2 +1,11 @@
 # PracaDyplomowa
-Temat: Aplikacja do bezpiecznego przechowywania danych w oparciu o technologię Blockchain
+**Activate the virtual environment**
+
+```
+source blockchain-env/bin/activate
+```
+**Install all packages**
+
+```
+pip install =r requirements.txt
+```
