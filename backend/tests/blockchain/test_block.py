@@ -17,3 +17,8 @@ def test_genesis():
 
     for key, value in GENESIS_DATA.items():
         getattr(genesis, key) == value
+
+def test_quickly_mined_block():
+    last_block  = Block.mine_block(Block.genesis(), 'foo')
+    mined_block = Block.mine_block(last_block, 'bar')
+    
