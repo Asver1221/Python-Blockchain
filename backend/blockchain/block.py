@@ -40,6 +40,9 @@ class Block:
     def mine_block(last_block, data):
         """
         Mine a block based on the given last_block and data, untill a block hash is found that meets the leading 0's proof of work requirement.
+        The leading 0's requirement is the standard proof of work implementation for finding valid blocks.
+        By adjusting a nonce value in the block, the miner has an infinite number of tries at generating new hashes.
+        Once the miner finds a hash with a matching number of leading 0's as the block difficulty, the fields for valid new block have been found.
         """
         timestamp = time.time_ns()
         last_hash = last_block.hash
