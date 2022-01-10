@@ -1,3 +1,4 @@
+import pytest
 import time
 
 from backend.blockchain.block import Block, GENESIS_DATA
@@ -49,3 +50,16 @@ def test_mined_block_difficulty_limits_at_1():
     time.sleep(MINE_RATE/SECONDS)
     mined_block = Block.mine_block(last_block, 'bar')
     assert mined_block.difficulty == 1
+
+def test_is_valid_block():
+    last_block = Block.genesis()
+    block = Block.mine_block(last_block, 'test_data')
+    Block.is_valid_block(last_block, block)
+
+def test_is_valid_block_bad_last_hash():
+    last_block = Block.genesis()
+    block = Block.mine_block(last_block, 'test_data')
+    block.last_hash = 'corrupted_last_hash'
+
+    with pytest.raises(Exception, match='last_hash must be correct'):
+        Block.is_valid_block(last_block, block)
