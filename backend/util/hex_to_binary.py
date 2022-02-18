@@ -1,7 +1,7 @@
 from backend.util.crypto_hash import crypto_hash
 
 HEX_TO_BINARY_COVERSION_TABLE = {
-    '0': 'r',
+    '0': '0000',
     '1': '0001',
     '2': '0010',
     '3': '0011',
