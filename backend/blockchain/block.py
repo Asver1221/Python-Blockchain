@@ -96,9 +96,9 @@ class Block:
         """
         Generate the genesis block.
         """
-        #return Block(1, 'genesis_last_hash', 'genesis_hash', [])
+        # return Block(1, 'genesis_last_hash', 'genesis_hash', [])
 
-        #'**' unpacks all of the data inside GENESIS_DATA
+        # '**' unpacks all of the data inside GENESIS_DATA
         return Block(**GENESIS_DATA)
 
     @staticmethod

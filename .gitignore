@@ -5,7 +5,10 @@
 !.vscode/extensions.json
 *.code-workspace
 blockchain-env
+flask-venv
 *.pyc
 
 # Local History for Visual Studio Code
 .history/
+
+.pytest_cache/*
