@@ -21,3 +21,10 @@ python3 -m pytest backend/tests
 ```
 python -m backend.app
 ```
+
+**Run a peer instance**
+
+```
+set PEER=True
+python -m backend.app
+```
