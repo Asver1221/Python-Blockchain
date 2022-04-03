@@ -1,6 +1,6 @@
 from backend.util.crypto_hash import crypto_hash
 
-HEX_TO_BINARY_COVERSION_TABLE = {
+HEX_TO_BINARY_CONVERSION_TABLE = {
     '0': '0000',
     '1': '0001',
     '2': '0010',
@@ -23,7 +23,7 @@ def hex_to_binary(hex_string):
     binary_string = ''
 
     for character in hex_string:
-        binary_string += HEX_TO_BINARY_COVERSION_TABLE[character]
+        binary_string += HEX_TO_BINARY_CONVERSION_TABLE[character]
     
     return binary_string
 
