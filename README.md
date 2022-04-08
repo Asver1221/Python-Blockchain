@@ -35,3 +35,9 @@ In the frontend directory:
 ```
 npm run start
 ```
+
+**Seed the backend with data**
+```
+set SEED_DATA=True
+python -m backend.app
+```
