@@ -1,7 +1,7 @@
 from backend.config import STARTING_BALANCE
-from backend.wallet.wallet import Wallet
+from backend.models.wallet import Wallet
 from backend.models.blockchain import Blockchain
-from backend.wallet.transaction import Transaction
+from backend.models.transaction import Transaction
 
 def test_verify_valid_signature():
     data = { 'foo' : 'test_data' }

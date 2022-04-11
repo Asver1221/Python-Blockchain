@@ -1,7 +1,7 @@
 import pytest
 
-from backend.wallet.transaction import Transaction
-from backend.wallet.wallet import Wallet
+from backend.models.transaction import Transaction
+from backend.models.wallet import Wallet
 from backend.config import MINING_REWARD, MINING_REWARD_INPUT
 
 def test_transaction():
