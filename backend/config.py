@@ -7,5 +7,8 @@ MINE_RATE = 4 * SECONDS
 
 STARTING_BALANCE = 1000
 
+ROOT_PORT = 5000
+PORT = ROOT_PORT
+
 MINING_REWARD = 50
 MINING_REWARD_INPUT = { 'address' : '*--official-mining-reward--*' }

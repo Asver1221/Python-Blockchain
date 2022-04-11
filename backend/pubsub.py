@@ -5,7 +5,7 @@ from pubnub.pnconfiguration import PNConfiguration
 from pubnub.callbacks import SubscribeCallback
 
 from backend.models.block import Block
-from backend.wallet.transaction import Transaction
+from backend.models.transaction import Transaction
 
 
 pnconfig = PNConfiguration()

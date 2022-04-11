@@ -10,7 +10,7 @@ function ConductTransaction() {
     const [knownAddresses, setKnownAddresses] = useState([])
 
     useEffect(() => {
-        fetch(`${API_BASE_URL}/known-addresses`)
+        fetch(`${API_BASE_URL}/blockchain/known-addresses`)
         .then(response => response.json())
         .then(json => setKnownAddresses(json));
     }, []);
