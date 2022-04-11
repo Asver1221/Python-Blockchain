@@ -4,12 +4,11 @@ from flask import Flask
 from flask_cors import CORS
 import requests
 
+from backend.models.blockchain import Blockchain
+
+from backend.routes.blueprints import WALLET, BLOCKCHAIN, TRANSACTION
 from backend.config import PORT, ROOT_PORT
 
-from backend.models.blockchain import Blockchain
-from backend.routes.wallet import WALLET
-from backend.routes.blockchain import BLOCKCHAIN
-from backend.routes.transaction import TRANSACTION
 
 app = Flask(__name__)
 @app.route('/')
@@ -34,4 +33,4 @@ if os.environ.get('PEER') == 'True':
     except Exception as e:
         print(f'\n --Error synchronizing: {e}')
 
-app.run(host='0.0.0.0', port=PORT, debug=False)
+app.run(port=PORT)
