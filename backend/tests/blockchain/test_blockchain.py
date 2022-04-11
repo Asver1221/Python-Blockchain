@@ -1,9 +1,9 @@
 import pytest
 
-from backend.blockchain.blockchain import Blockchain
-from backend.wallet.wallet import Wallet
-from backend.wallet.transaction import Transaction
-from backend.blockchain.block import GENESIS_DATA
+from backend.models.blockchain import Blockchain
+from backend.models.wallet import Wallet
+from backend.models.transaction import Transaction
+from backend.models.block import GENESIS_DATA
 
 def test_blockchain_instance():
     blockchain = Blockchain()

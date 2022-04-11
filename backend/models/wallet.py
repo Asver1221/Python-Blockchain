@@ -98,21 +98,3 @@ class Wallet:
 
         return balance
                 
-
-def main():
-    wallet = Wallet()
-    print(f'wallet.__dict__: {wallet.__dict__}')
-
-    data = { 'foo' : 'bar' }
-    signature = wallet.sign(data)
-    print(f'signature: {signature}')
-
-    should_be_valid = Wallet.verify(wallet.public_key, data, signature)
-    print(f'should be valid: {should_be_valid}')
-
-    should_be_invalid = Wallet.verify(Wallet().public_key, data, signature)
-    print(f'should be invalid: {should_be_invalid}')
-
-if __name__ == '__main__':
-    main()
-

@@ -1,7 +1,7 @@
-from backend.wallet.transaction_pool import TransactionPool
-from backend.wallet.transaction import Transaction
-from backend.wallet.wallet import Wallet
-from backend.blockchain.blockchain import Blockchain
+from backend.models.transaction_pool import TransactionPool
+from backend.models.transaction import Transaction
+from backend.models.wallet import Wallet
+from backend.models.blockchain import Blockchain
 
 def test_set_transaction():
     transaction_pool = TransactionPool()
