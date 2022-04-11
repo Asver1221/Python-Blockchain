@@ -5,10 +5,10 @@ import requests
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 
-from backend.blockchain.blockchain import Blockchain
-from backend.wallet.wallet import Wallet
-from backend.wallet.transaction import Transaction
-from backend.wallet.transaction_pool import TransactionPool
+from backend.models.blockchain import Blockchain
+from backend.models.wallet import Wallet
+from backend.models.transaction import Transaction
+from backend.models.transaction_pool import TransactionPool
 from backend.pubsub import PubSub
 
 app = Flask(__name__)
@@ -75,7 +75,7 @@ def route_wallet_transact():
 def route_wallet_info():
     return jsonify({ 'address' : wallet.address, 'balance' : wallet.balance})
 
-@app.route('/known-addresses')
+@app.route('blockchain/known-addresses')
 def route_known_adresses():
     known_addresses = set()
 
