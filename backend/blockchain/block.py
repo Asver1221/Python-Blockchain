@@ -39,6 +39,7 @@ class Block:
     def __eq__(self, other):
         return self.__dict__ == other.__dict__
 
+    #wywalić
     def to_json(self):
         """
         Serialize the block into a dictionary of its attributes
@@ -102,7 +103,6 @@ class Block:
         """
         Generate the genesis block.
         """
-        # return Block(1, 'genesis_last_hash', 'genesis_hash', [])
 
         # '**' unpacks all of the data inside GENESIS_DATA
         return Block(**GENESIS_DATA)
