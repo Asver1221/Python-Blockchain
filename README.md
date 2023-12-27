@@ -1,4 +1,4 @@
-# PracaDyplomowa
+# Readme first!
 **Activate the virtual environment**
 ```
 source flask-venv/bin/activate
